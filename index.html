@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Política de Privacidad de la aplicación ContaTeam by Contagramm. Conoce cómo tratamos y protegemos tus datos personales conforme a la Ley Federal de Protección de Datos Personales en Posesión de Particulares." />
+  <title>Política de Privacidad — ContaTeam | Contagramm</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --brand:         #2563eb;
+      --brand-light:   #3b82f6;
+      --brand-dim:     #dbeafe;
+      --brand-dark:    #1e3a8a;
+      --bg:            #f1f5f9;
+      --surface:       #ffffff;
+      --surface-2:     #f8fafc;
+      --border:        #e2e8f0;
+      --border-soft:   #f1f5f9;
+      --text:          #0f172a;
+      --text-2:        #1e293b;
+      --text-muted:    #64748b;
+      --text-faint:    #94a3b8;
+      --accent-bg:     #eff6ff;
+      --accent-border: #bfdbfe;
+      --green:         #059669;
+      --green-bg:      #ecfdf5;
+      --amber:         #d97706;
+      --amber-bg:      #fffbeb;
+      --amber-border:  #fde68a;
+      --radius-sm:     8px;
+      --radius:        14px;
+      --radius-lg:     20px;
+      --shadow-sm:     0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+      --shadow:        0 4px 16px rgba(0,0,0,.07), 0 1px 3px rgba(0,0,0,.05);
+      --shadow-lg:     0 20px 60px rgba(0,0,0,.10), 0 4px 16px rgba(0,0,0,.06);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      font-size: 15.5px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ════════════════════════════════
+       HERO
+    ════════════════════════════════ */
+    .hero {
+      position: relative;
+      background: #0a1628;
+      overflow: hidden;
+      padding: 72px 24px 80px;
+      text-align: center;
+    }
+
+    /* Subtle mesh gradient */
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 20% 0%,   rgba(37,99,235,.45) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 50% at 80% 100%,  rgba(6,182,212,.25)  0%, transparent 55%),
+        radial-gradient(ellipse 50% 70% at 50% 50%,   rgba(99,102,241,.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* Decorative grid lines */
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none;
+    }
+
+    .hero-inner { position: relative; z-index: 1; max-width: 640px; margin: 0 auto; }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 50px;
+      padding: 6px 16px 6px 10px;
+      font-size: 12.5px;
+      font-weight: 600;
+      letter-spacing: .6px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.75);
+      margin-bottom: 24px;
+      backdrop-filter: blur(12px);
+    }
+
+    .hero-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: #34d399;
+      box-shadow: 0 0 8px #34d399;
+      animation: pulse-dot 2.4s ease-in-out infinite;
+    }
+
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: .6; transform: scale(.8); }
+    }
+
+    .hero h1 {
+      font-size: clamp(1.9rem, 5vw, 3rem);
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -.02em;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(90deg, #60a5fa, #a5b4fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-sub {
+      font-size: 15.5px;
+      color: rgba(255,255,255,.55);
+      line-height: 1.65;
+      max-width: 460px;
+      margin: 0 auto 32px;
+    }
+
+    .hero-meta {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .hero-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: 8px;
+      padding: 5px 12px;
+      font-size: 12.5px;
+      color: rgba(255,255,255,.60);
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-chip svg { width: 13px; height: 13px; opacity: .7; }
+
+    /* ════════════════════════════════
+       LAYOUT: two-column with sticky TOC
+    ════════════════════════════════ */
+    .page-wrap {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 48px 24px 96px;
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    /* ── TOC ── */
+    .toc {
+      position: sticky;
+      top: 32px;
+    }
+
+    .toc-label {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      margin-bottom: 12px;
+      padding-left: 12px;
+    }
+
+    .toc-list {
+      list-style: none;
+      border-left: 2px solid var(--border);
+    }
+
+    .toc-list li a {
+      display: block;
+      padding: 7px 12px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-muted);
+      text-decoration: none;
+      border-left: 2px solid transparent;
+      margin-left: -2px;
+      transition: color .18s, border-color .18s, background .18s;
+      border-radius: 0 6px 6px 0;
+      line-height: 1.4;
+    }
+
+    .toc-list li a:hover {
+      color: var(--brand);
+      border-left-color: var(--brand);
+      background: var(--accent-bg);
+    }
+
+    /* ── CONTENT ── */
+    .content { min-width: 0; }
+
+    /* ════════════════════════════════
+       SECTIONS
+    ════════════════════════════════ */
+    .section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 36px 40px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow .2s;
+    }
+
+    .section:hover { box-shadow: var(--shadow); }
+
+    /* Section header */
+    .section-head {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 24px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .s-icon {
+      width: 44px; height: 44px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      background: var(--accent-bg);
+      border: 1px solid var(--accent-border);
+    }
+
+    .s-icon svg { width: 20px; height: 20px; stroke: var(--brand); }
+
+    .s-icon.green  { background: var(--green-bg);  border-color: #a7f3d0; }
+    .s-icon.green svg { stroke: var(--green); }
+    .s-icon.amber  { background: var(--amber-bg);  border-color: var(--amber-border); }
+    .s-icon.amber svg { stroke: var(--amber); }
+    .s-icon.purple { background: #f5f3ff; border-color: #ddd6fe; }
+    .s-icon.purple svg { stroke: #7c3aed; }
+
+    .s-title { flex: 1; }
+
+    .s-num {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .8px;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      margin-bottom: 3px;
+    }
+
+    h2 {
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -.015em;
+      line-height: 1.3;
+    }
+
+    /* Body text */
+    .prose p { color: var(--text-2); margin-bottom: 14px; }
+    .prose p:last-child { margin-bottom: 0; }
+
+    .prose ul, .prose ol {
+      padding-left: 22px;
+      margin-bottom: 14px;
+    }
+
+    .prose li { color: var(--text-2); margin-bottom: 7px; }
+    .prose li:last-child { margin-bottom: 0; }
+
+    .prose strong { color: var(--text); font-weight: 600; }
+
+    /* ════════════════════════════════
+       TAG / PILL LIST
+    ════════════════════════════════ */
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      list-style: none;
+      padding: 0;
+      margin-top: 4px;
+    }
+
+    .pill-list li {
+      background: var(--accent-bg);
+      border: 1px solid var(--accent-border);
+      color: #1e40af;
+      border-radius: var(--radius-sm);
+      padding: 5px 13px;
+      font-size: 13px;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    /* ════════════════════════════════
+       PURPOSE CARDS
+    ════════════════════════════════ */
+    .purpose-group { margin-bottom: 24px; }
+
+    .group-label {
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: .6px;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .group-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .purpose-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+      gap: 10px;
+    }
+
+    .p-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px 18px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: var(--surface-2);
+      transition: border-color .18s, background .18s;
+    }
+
+    .p-card:hover {
+      border-color: var(--accent-border);
+      background: var(--accent-bg);
+    }
+
+    .p-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--brand);
+      margin-top: 6px;
+      flex-shrink: 0;
+    }
+
+    .p-dot.secondary { background: #94a3b8; }
+
+    .p-card-body { flex: 1; }
+    .p-card-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      margin-bottom: 2px;
+    }
+
+    .p-card-title {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--text-2);
+    }
+
+    /* ════════════════════════════════
+       ARCO RIGHTS
+    ════════════════════════════════ */
+    .arco-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .arco-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      position: relative;
+      overflow: hidden;
+      background: var(--surface);
+      transition: box-shadow .18s, transform .18s;
+    }
+
+    .arco-card:hover {
+      box-shadow: var(--shadow);
+      transform: translateY(-2px);
+    }
+
+    .arco-bar {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      border-radius: 3px 3px 0 0;
+    }
+
+    .arco-card:nth-child(1) .arco-bar { background: linear-gradient(90deg,#3b82f6,#06b6d4); }
+    .arco-card:nth-child(2) .arco-bar { background: linear-gradient(90deg,#8b5cf6,#ec4899); }
+    .arco-card:nth-child(3) .arco-bar { background: linear-gradient(90deg,#f59e0b,#ef4444); }
+    .arco-card:nth-child(4) .arco-bar { background: linear-gradient(90deg,#10b981,#3b82f6); }
+
+    .arco-letter {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px; height: 36px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 800;
+      margin-bottom: 10px;
+      margin-top: 4px;
+    }
+
+    .arco-card:nth-child(1) .arco-letter { background: #dbeafe; color: #1d4ed8; }
+    .arco-card:nth-child(2) .arco-letter { background: #ede9fe; color: #6d28d9; }
+    .arco-card:nth-child(3) .arco-letter { background: #fef3c7; color: #b45309; }
+    .arco-card:nth-child(4) .arco-letter { background: #d1fae5; color: #065f46; }
+
+    .arco-card h3 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .arco-card p {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* ════════════════════════════════
+       CONTACT BOX
+    ════════════════════════════════ */
+    .contact-box {
+      background: linear-gradient(145deg, #0f172a 0%, #1e3a8a 100%);
+      border-radius: var(--radius-lg);
+      padding: 28px 30px;
+      margin-top: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-box::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 80% at 90% 10%, rgba(59,130,246,.25), transparent 60%);
+      pointer-events: none;
+    }
+
+    .contact-box-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .contact-box-icon {
+      width: 36px; height: 36px;
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+    }
+
+    .contact-box-icon svg { width: 16px; height: 16px; stroke: #93c5fd; }
+
+    .contact-box h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .contact-rows { display: flex; flex-direction: column; gap: 12px; position: relative; }
+
+    .c-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 14px;
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 10px;
+    }
+
+    .c-row-icon {
+      width: 30px; height: 30px;
+      background: rgba(255,255,255,.08);
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+    }
+
+    .c-row-icon svg { width: 14px; height: 14px; stroke: #93c5fd; }
+
+    .c-row-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .4px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.4);
+      margin-bottom: 2px;
+    }
+
+    .c-row-value {
+      font-size: 14px;
+      color: rgba(255,255,255,.85);
+      font-weight: 500;
+    }
+
+    .c-row-value a { color: #93c5fd; text-decoration: none; }
+    .c-row-value a:hover { text-decoration: underline; }
+
+    /* ════════════════════════════════
+       NOTICE / CALLOUT
+    ════════════════════════════════ */
+    .callout {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      border-radius: var(--radius);
+      padding: 16px 18px;
+      margin: 16px 0;
+      font-size: 13.5px;
+      line-height: 1.6;
+    }
+
+    .callout svg { width: 17px; height: 17px; flex-shrink: 0; margin-top: 1px; }
+
+    .callout.warn {
+      background: var(--amber-bg);
+      border: 1px solid var(--amber-border);
+      color: #78350f;
+    }
+    .callout.warn svg { stroke: var(--amber); }
+
+    .callout.info {
+      background: var(--accent-bg);
+      border: 1px solid var(--accent-border);
+      color: #1e3a8a;
+    }
+    .callout.info svg { stroke: var(--brand); }
+
+    /* ════════════════════════════════
+       RESPONSE TIMELINE
+    ════════════════════════════════ */
+    .timeline {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      margin: 20px 0;
+      flex-wrap: wrap;
+    }
+
+    .t-step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      flex: 1;
+      min-width: 100px;
+    }
+
+    .t-circle {
+      width: 42px; height: 42px;
+      border-radius: 50%;
+      background: var(--accent-bg);
+      border: 2px solid var(--brand-dim);
+      display: grid;
+      place-items: center;
+      margin-bottom: 8px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .t-circle svg { width: 18px; height: 18px; stroke: var(--brand); }
+
+    .t-label {
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .t-sub {
+      font-size: 11px;
+      color: var(--text-faint);
+    }
+
+    .t-line {
+      flex: 1;
+      height: 2px;
+      background: linear-gradient(90deg, var(--brand-dim), var(--accent-border));
+      min-width: 20px;
+      margin-top: -34px;
+      align-self: flex-start;
+    }
+
+    /* ════════════════════════════════
+       FOOTER
+    ════════════════════════════════ */
+    footer {
+      background: #0f172a;
+      color: rgba(255,255,255,.4);
+      text-align: center;
+      padding: 40px 24px;
+      font-size: 13px;
+    }
+
+    .footer-logo {
+      display: inline-block;
+      font-size: 18px;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -.02em;
+      margin-bottom: 8px;
+    }
+
+    .footer-logo span { color: #3b82f6; }
+
+    footer p { margin-bottom: 4px; }
+
+    footer a { color: #60a5fa; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    .footer-divider {
+      width: 40px;
+      height: 1px;
+      background: rgba(255,255,255,.1);
+      margin: 16px auto;
+    }
+
+    /* ════════════════════════════════
+       GENERAL LINKS
+    ════════════════════════════════ */
+    a { color: var(--brand); font-weight: 500; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ════════════════════════════════
+       RESPONSIVE
+    ════════════════════════════════ */
+    @media (max-width: 768px) {
+      .page-wrap {
+        grid-template-columns: 1fr;
+      }
+      .toc { display: none; }
+      .section { padding: 24px 20px; }
+      .contact-box { padding: 22px 18px; }
+    }
+
+    /* ── PRINT ── */
+    @media print {
+      .hero { padding: 32px 24px; }
+      .toc  { display: none; }
+      .page-wrap { display: block; max-width: 100%; padding: 24px; }
+      .section { box-shadow: none; border: 1px solid #ddd; margin-bottom: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════
+       HERO
+  ══════════════════════════════════════ -->
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-eyebrow">
+        <div class="hero-dot"></div>
+        Documento Legal — Contagramm
+      </div>
+      <h1>Política de <span>Privacidad</span></h1>
+      <p class="hero-sub">
+        Conoce cómo tratamos y protegemos tus datos personales en la aplicación <strong>ContaTeam</strong>, conforme a la Ley Federal de Protección de Datos Personales en Posesión de Particulares.
+      </p>
+      <div class="hero-meta">
+        <div class="hero-chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Actualización: 13 mayo 2026
+        </div>
+        <div class="hero-chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          LFPDPPP — México
+        </div>
+        <div class="hero-chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          ContaTeam v1.0
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════
+       PAGE WRAP
+  ══════════════════════════════════════ -->
+  <div class="page-wrap">
+
+    <!-- ── TOC ── -->
+    <aside class="toc">
+      <div class="toc-label">En esta página</div>
+      <ul class="toc-list">
+        <li><a href="#responsable">Responsable</a></li>
+        <li><a href="#datos">Datos personales</a></li>
+        <li><a href="#finalidades">Finalidades</a></li>
+        <li><a href="#transferencias">Transferencias</a></li>
+        <li><a href="#terceros">Proveedores de servicios</a></li>
+        <li><a href="#retencion">Retención y eliminación</a></li>
+        <li><a href="#arco">Derechos ARCO</a></li>
+        <li><a href="#limitar">Limitar uso</a></li>
+        <li><a href="#cambios">Cambios al aviso</a></li>
+      </ul>
+    </aside>
+
+    <!-- ── CONTENT ── -->
+    <div class="content">
+
+      <!-- 1. RESPONSABLE -->
+      <section id="responsable" class="section">
+        <div class="section-head">
+          <div class="s-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div class="s-title">
+            <div class="s-num">Sección 01</div>
+            <h2>Identidad y domicilio del responsable</h2>
+          </div>
+        </div>
+        <div class="prose">
+          <p>
+            En cumplimiento al deber de resguardo de información y de datos personales, y con fundamento en lo dispuesto por los artículos 3 fracción I, 8, 12, 15, 16 y demás relativos de la <strong>Ley Federal de Protección de Datos Personales en Posesión de Particulares</strong>, la empresa <strong>CONSULTING &amp; MANAGEMENT RESOURCE S.C.</strong>, con nombre comercial <strong>CONTAGRAMM</strong>, pone a su disposición el presente Aviso de Privacidad.
+          </p>
+          <p>
+            Nos ubicamos en <strong>Jazmines 20, Fracc. Jardines de las Lomas, Loc. Montoya, Oaxaca de Juárez, Oaxaca, México</strong> y somos el responsable del uso y protección de los datos personales que nos proporcione a través de nuestra aplicación móvil para control de asistencia corporativa, <strong>ContaTeam</strong>.
+          </p>
+        </div>
+      </section>
+
+      <!-- 2. DATOS PERSONALES -->
+      <section id="datos" class="section">
+        <div class="section-head">
+          <div class="s-icon green">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          </div>
+          <div class="s-title">
+            <div class="s-num">Sección 02</div>
+            <h2>Datos personales utilizados</h2>
+          </div>
+        </div>
+        <div class="prose">
+          <p>Para brindar las funcionalidades de ContaTeam (control de asistencia, ubicación y reportes), recopilamos y procesamos de manera transparente los siguientes datos (incluyendo permisos requeridos en dispositivos iOS y Android):</p>
+          <ul style="margin-top: 14px;">
+            <li><strong>Datos de Identidad y Laborales:</strong> Nombre completo, correo electrónico, rol, puesto, departamento e historial de asistencia.</li>
+            <li><strong>Ubicación (GPS):</strong> <em>(Requiere permiso de Ubicación)</em> Accedemos a la ubicación precisa del dispositivo <strong>solo cuando la aplicación está en uso</strong> y en el momento exacto de registrar una entrada o salida. Esto garantiza que el empleado se encuentre en el centro de trabajo designado. No rastreamos la ubicación en segundo plano.</li>
+            <li><strong>Cámara y Fotografías:</strong> <em>(Requiere permiso de Cámara)</em> Solicitamos acceso a la cámara únicamente para capturar evidencia fotográfica que el usuario decide adjuntar a sus reportes o justificaciones.</li>
+            <li><strong>Datos del Dispositivo:</strong> Información técnica (modelo, sistema operativo y tokens push) utilizada estrictamente para la prevención de fraudes (alertas de inicios de sesión múltiples) y envío de notificaciones.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 3. FINALIDADES -->
+      <section id="finalidades" class="section">
+        <div class="section-head">
+          <div class="s-icon purple">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <div class="s-title">
+            <div class="s-num">Sección 03</div>
+            <h2>Finalidades del tratamiento de datos personales</h2>
+          </div>
+        </div>
+
+        <div class="purpose-group">
+          <div class="group-label">Finalidades primarias — necesarias para el servicio</div>
+          <div class="purpose-grid">
+            <div class="p-card">
+              <div class="p-dot"></div>
+              <div class="p-card-body">
+                <div class="p-card-label">Asistencia</div>
+                <div class="p-card-title">Registro de entradas, salidas y validación de ubicación</div>
+              </div>
+            </div>
+            <div class="p-card">
+              <div class="p-dot"></div>
+              <div class="p-card-body">
+                <div class="p-card-label">Gestión Laboral</div>
+                <div class="p-card-title">Administración de reportes, permisos y vacaciones</div>
+              </div>
+            </div>
+            <div class="p-card">
+              <div class="p-dot"></div>
+              <div class="p-card-body">
+                <div class="p-card-label">Seguridad</div>
+                <div class="p-card-title">Auditoría de accesos y prevención de fraude en el registro</div>
+              </div>
+            </div>
+            <div class="p-card">
+              <div class="p-dot"></div>
+              <div class="p-card-body">
+                <div class="p-card-label">Comunicación</div>
+                <div class="p-card-title">Envío de notificaciones push sobre solicitudes y avisos</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="purpose-group" style="margin-bottom:0">
+          <div class="group-label">Finalidades secundarias — operativas</div>
+          <div class="purpose-grid">
+            <div class="p-card">
+              <div class="p-dot secondary"></div>
+              <div class="p-card-body">
+                <div class="p-card-label">Soporte técnico</div>
+                <div class="p-card-title">Resolución de errores y mejora continua de la aplicación</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. TRANSFERENCIAS -->
+      <section id="transferencias" class="section">
+        <div class="section-head">
+          <div class="s-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+          </div>
+          <div class="s-title">
+            <div class="s-num">Sección 04</div>
+            <h2>Transferencias de datos</h2>
+          </div>
+        </div>
+        <div class="prose">
+          <div class="callout info">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>La información recopilada por ContaTeam es de uso estrictamente interno corporativo. No vendemos, alquilamos ni compartimos sus datos personales con terceros con fines publicitarios o comerciales, salvo por requerimientos legales de autoridades competentes.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. TERCEROS / PROVEEDORES -->
+      <section id="terceros" class="section">
+        <div class="section-head">
+          <div class="s-icon amber">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          </div>
+          <div class="s-title">
+            <div class="s-num">Sección 05</div>
+            <h2>Proveedores de servicios en la nube</h2>
+          </div>
+        </div>
+        <div class="prose">
+          <p>
+            Para garantizar el funcionamiento de ContaTeam, utilizamos infraestructura de proveedores tecnológicos de primer nivel. Estos servicios actúan únicamente como procesadores de datos bajo nuestras instrucciones:
+          </p>
+          <div class="callout warn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <span>Los proveedores descritos cumplen con estrictos estándares de seguridad internacionales, pero están sujetos a sus propios términos de servicio en la prestación de la infraestructura técnica.</span>
+          </div>
+          <ul>
+            <li><strong>Google Cloud y Firebase:</strong> Alojamiento de bases de datos, almacenamiento de imágenes y ejecución de lógica en la nube de forma segura.</li>
+            <li><strong>Expo (EAS):</strong> Servicios para la construcción de la aplicación móvil y entrega de notificaciones push a los dispositivos registrados.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 6. RETENCIÓN Y ELIMINACIÓN (APP STORE COMPLIANCE) -->
+      <section id="retencion" class="section">
+        <div class="section-head">
+          <div class="s-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/></svg>
+          </div>
+          <div class="s-title">
+            <div class="s-num">Sección 06</div>
+            <h2>Retención y eliminación de cuenta</h2>
+          </div>
+        </div>
+        <div class="prose">
+          <p>
+            En estricto cumplimiento con las normativas de privacidad y las directrices de la <strong>App Store de Apple</strong> y <strong>Google Play</strong>, ContaTeam garantiza el derecho a solicitar la eliminación de su cuenta y datos asociados.
+          </p>
+          <div class="callout info">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <span><strong>Eliminación de cuenta:</strong> Usted puede solicitar la eliminación permanente de su cuenta y datos personales enviando un correo electrónico desde su cuenta registrada a <a href="mailto:sistemas@contagramm.com">sistemas@contagramm.com</a> con el asunto "Solicitud de Eliminación de Cuenta". Alternativamente, el proceso puede iniciarse contactando directamente a su departamento de Sistemas.</span>
+          </div>
+          <p><strong>Política de Retención:</strong></p>
+          <ul>
+            <li>Los datos se retienen únicamente durante el tiempo que el usuario mantenga una relación laboral activa que requiera el uso de la aplicación, o el tiempo exigido por las leyes laborales y fiscales aplicables.</li>
+            <li>Al procesar una solicitud de eliminación, los datos de acceso (credenciales y tokens de dispositivo) se eliminarán en un plazo máximo de 20 días hábiles. Los registros históricos de asistencia podrán ser retenidos por el empleador exclusivamente para cumplir con obligaciones normativas.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 7. DERECHOS ARCO -->
+      <section id="arco" class="section">
+        <div class="section-head">
+          <div class="s-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="s-title">
+            <div class="s-num">Sección 07</div>
+            <h2>Medios para ejercer los derechos ARCO</h2>
+          </div>
+        </div>
+
+        <div class="arco-grid">
+          <div class="arco-card">
+            <div class="arco-bar"></div>
+            <div class="arco-letter">A</div>
+            <h3>Acceso</h3>
+            <p>Solicitar y obtener información sobre los datos personales que tenemos almacenados sobre usted.</p>
+          </div>
+          <div class="arco-card">
+            <div class="arco-bar"></div>
+            <div class="arco-letter">R</div>
+            <h3>Rectificación</h3>
+            <p>Corregir datos incorrectos o incompletos. Nos comprometemos a actualizarlos conforme a la ley.</p>
+          </div>
+          <div class="arco-card">
+            <div class="arco-bar"></div>
+            <div class="arco-letter">C</div>
+            <h3>Cancelación</h3>
+            <p>Solicitar la eliminación de sus datos cuando no sean necesarios, salvo obligación legal laboral.</p>
+          </div>
+          <div class="arco-card">
+            <div class="arco-bar"></div>
+            <div class="arco-letter">O</div>
+            <h3>Oposición</h3>
+            <p>Oponerse al tratamiento de sus datos por motivos legítimos, salvo razones legales para continuar.</p>
+          </div>
+        </div>
+
+        <!-- Timeline -->
+        <div class="timeline">
+          <div class="t-step">
+            <div class="t-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div class="t-label">Solicitud</div>
+            <div class="t-sub">Por correo</div>
+          </div>
+          <div class="t-line"></div>
+          <div class="t-step">
+            <div class="t-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="t-label">Revisión</div>
+            <div class="t-sub">Sistemas</div>
+          </div>
+          <div class="t-line"></div>
+          <div class="t-step">
+            <div class="t-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.62 4.33 2 2 0 0 1 3.61 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.09 6.09l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div class="t-label">Respuesta</div>
+            <div class="t-sub">≤ 20 días hábiles</div>
+          </div>
+        </div>
+
+        <!-- Contact box -->
+        <div class="contact-box">
+          <div class="contact-box-head">
+            <div class="contact-box-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            </div>
+            <h3>Departamento responsable de solicitudes ARCO</h3>
+          </div>
+          <div class="contact-rows">
+            <div class="c-row">
+              <div class="c-row-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </div>
+              <div>
+                <div class="c-row-label">Área</div>
+                <div class="c-row-value">Departamento de Sistemas</div>
+              </div>
+            </div>
+            <div class="c-row">
+              <div class="c-row-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <div class="c-row-label">Domicilio</div>
+                <div class="c-row-value">Jazmines 20, Fracc. Jardines de las Lomas, Loc. Montoya, Oaxaca de Juárez, Oaxaca, México</div>
+              </div>
+            </div>
+            <div class="c-row">
+              <div class="c-row-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.62 4.33 2 2 0 0 1 3.61 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.09 6.09l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <div class="c-row-label">Teléfono</div>
+                <div class="c-row-value"><a href="tel:9515095970">951 509 59 70</a></div>
+              </div>
+            </div>
+            <div class="c-row">
+              <div class="c-row-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <div class="c-row-label">Correo electrónico</div>
+                <div class="c-row-value"><a href="mailto:sistemas@contagramm.com">sistemas@contagramm.com</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. LIMITAR USO -->
+      <section id="limitar" class="section">
+        <div class="section-head">
+          <div class="s-icon amber">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+          </div>
+          <div class="s-title">
+            <div class="s-num">Sección 08</div>
+            <h2>Opciones para limitar el uso o divulgación de datos</h2>
+          </div>
+        </div>
+        <div class="prose">
+          <p>
+            Al tratarse de una herramienta laboral, gran parte de la recopilación de datos (como registro de asistencia y ubicación) es necesaria para el cumplimiento de las obligaciones contractuales con la empresa. Sin embargo, si desea plantear inquietudes sobre el alcance del uso de sus datos, puede comunicarse a través del siguiente correo electrónico:
+          </p>
+          <div class="callout info">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:sistemas@contagramm.com">sistemas@contagramm.com</a>
+          </div>
+          <p>
+            La respuesta se comunicará vía <strong>correo electrónico o llamada telefónica</strong> en un plazo máximo de <strong>20 días hábiles</strong>.
+          </p>
+        </div>
+      </section>
+
+      <!-- 9. CAMBIOS -->
+      <section id="cambios" class="section">
+        <div class="section-head">
+          <div class="s-icon green">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.51"/></svg>
+          </div>
+          <div class="s-title">
+            <div class="s-num">Sección 09</div>
+            <h2>Cambios al Aviso de Privacidad</h2>
+          </div>
+        </div>
+        <div class="prose">
+          <p>
+            Nos reservamos el derecho de actualizar esta Política de Privacidad en cualquier momento. Cualquier cambio significativo que afecte el tratamiento de sus datos dentro de ContaTeam será notificado a través de:
+          </p>
+          <ul>
+            <li>Un aviso directo dentro de la aplicación móvil.</li>
+            <li>Nuestro sitio web: <a href="https://contagramm.net/" target="_blank" rel="noopener">https://contagramm.net/</a></li>
+          </ul>
+          <p>
+            Puede solicitar información sobre cambios recientes a través de <a href="mailto:sistemas@contagramm.com">sistemas@contagramm.com</a>.
+          </p>
+        </div>
+      </section>
+
+    </div><!-- /content -->
+  </div><!-- /page-wrap -->
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer>
+    <div class="footer-logo">CONTRA<span>GRAMM</span></div>
+    <p>CONSULTING &amp; MANAGEMENT RESOURCE S.C.</p>
+    <div class="footer-divider"></div>
+    <p>Jazmines 20, Fracc. Jardines de las Lomas, Oaxaca de Juárez, Oaxaca, México</p>
+    <p style="margin-top:4px;">
+      <a href="tel:9515095970">951 509 59 70</a>
+      &nbsp;·&nbsp;
+      <a href="mailto:sistemas@contagramm.com">sistemas@contagramm.com</a>
+      &nbsp;·&nbsp;
+      <a href="https://contagramm.net" target="_blank" rel="noopener">contagramm.net</a>
+    </p>
+    <p style="margin-top:14px; opacity:.4; font-size:12px;">Última actualización: 13 de mayo de 2026 &nbsp;·&nbsp; Todos los derechos reservados</p>
+  </footer>
+
+</body>
+</html>
